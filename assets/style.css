@@ -1,0 +1,38 @@
+
+:root{
+  --bg:#0e0f12; --fg:#e8eaf1; --muted:#a9b0c9; --brand:#6be3ff; --acc:#8fff8f;
+  --card:#171923; --alt:#0f1320; --ring:#6be3ff33;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--fg);background:linear-gradient(180deg,var(--bg),#0a0c10) fixed;}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+.section{padding:64px 24px;max-width:1100px;margin:0 auto}
+.section.alt{background:linear-gradient(180deg,var(--alt),transparent)}
+.site-header{position:relative}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;backdrop-filter:saturate(160%) blur(6px);position:sticky;top:0;z-index:10;background:#0e0f12d9;border-bottom:1px solid #1c2238}
+.brand{font-weight:800;letter-spacing:.2px}
+.nav-toggle{display:none;background:transparent;border:1px solid #2a355c;color:var(--fg);padding:6px 10px;border-radius:10px}
+.nav-links{display:flex;gap:16px;list-style:none;margin:0;padding:0}
+.hero{padding:96px 24px;background:radial-gradient(1000px 380px at 50% -40%,#22335a 0%,transparent 60%),linear-gradient(180deg,#101528,transparent)}
+.hero-inner{max-width:1000px;margin:0 auto;text-align:center}
+.hero h1{font-size:40px;line-height:1.1;margin:0 0 8px}
+.subtitle{color:var(--muted);margin:0 0 6px}
+.meta{color:var(--muted);font-size:14px;margin:0 0 22px}
+.btn{display:inline-block;padding:10px 16px;border-radius:14px;border:1px solid #2a355c}
+.btn.primary{background:linear-gradient(90deg, var(--brand), var(--acc)); color:#0b0f1a; font-weight:700}
+.grid.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.timeline{border-left:2px dashed #2a355c;margin:16px 0 0;padding-left:18px}
+.slot{margin:14px 0;padding:8px 12px;border:1px solid #212945;border-radius:14px;background:var(--card);box-shadow:0 0 0 4px var(--ring)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid #20294a;border-radius:18px;padding:16px;box-shadow:0 10px 30px #00000033}
+.note{color:var(--muted)}
+.accordion summary{cursor:pointer;font-weight:600;margin:12px 0}
+.site-footer{padding:24px;color:var(--muted);text-align:center;border-top:1px solid #1c2238}
+@media (max-width:760px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;flex-direction:column;background:#0e0f12;border:1px solid #1c2238;padding:8px;position:absolute;right:12px;top:46px;border-radius:12px}
+  .nav-links.open{display:flex}
+  .hero h1{font-size:30px}
+}
