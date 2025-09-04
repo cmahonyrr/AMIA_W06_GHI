@@ -1,0 +1,1 @@
+If you want to host the AMIA Poster Template locally, download the DOCX from AMIA and place it here as 'AMIA-Poster-Template.docx'. Then update the link in index.html to point to assets/AMIA-Poster-Template.docx
