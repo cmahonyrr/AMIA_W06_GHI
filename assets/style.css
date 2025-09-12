@@ -51,3 +51,70 @@ a:hover{text-decoration:underline}
 /* Slot time label and subnote */
 .slot-time{display:block;font-size:12px;color:var(--muted);margin-bottom:6px;letter-spacing:.2px}
 .subnote{font-style:italic;color:var(--muted)}
+
+/* ==========================================================================
+   Timeline for Important Dates (Integrated with existing styles)
+   ========================================================================== */
+   .dates-timeline {
+    position: relative;
+    /* Espacio a la izquierda para la línea y los iconos */
+    padding-left: 60px; 
+    margin: 2.5rem 0;
+  }
+  
+  /* La línea vertical principal, usando un color de borde existente */
+  .dates-timeline::before {
+    content: '';
+    position: absolute;
+    left: 19px; /* Centra la línea de 2px en el espacio del icono de 40px */
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background-color: #2a355c; /* Color consistente con tus bordes */
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .timeline-icon {
+    position: absolute;
+    /* Mueve el icono a la izquierda para alinearlo con el padding */
+    left: -60px; 
+    top: -2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* Usa tu color de marca principal para el fondo del icono */
+    background-color: var(--brand); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .timeline-icon svg {
+    width: 20px;
+    height: 20px;
+    /* El icono será oscuro para contrastar con el fondo claro de la marca */
+    color: var(--bg); 
+  }
+  
+  .timeline-content h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    /* Usa tu color de texto principal */
+    color: var(--fg); 
+  }
+  
+  .timeline-content p {
+    margin: 0;
+    font-size: 1rem;
+    /* Usa tu color de texto "apagado" o secundario */
+    color: var(--muted); 
+  }
