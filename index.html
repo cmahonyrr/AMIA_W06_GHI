@@ -1,244 +1,554 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DepAI Workshop 2025 — Deploying AI in Biomedical Informatics</title>
-  <meta name="description" content="Participatory AMIA 2025 workshop (DepAI): CFIR-guided strategies to overcome real‑world challenges in AI deployment for biomedical informatics.">
-  <meta name="keywords" content="AI Deployment, Biomedical Informatics, Global Health, CFIR, Implementation Science, Health Equity">
-  <link rel="canonical" href="https://<your-username>.github.io/<your-repo>/">
-  <meta property="og:title" content="DepAI Workshop 2025 — Deploying AI in Biomedical Informatics">
-  <meta property="og:description" content="Hands-on, CFIR-based workshop to address bias, interoperability, equity, and scalability for AI in healthcare.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://<your-username>.github.io/<your-repo>/">
-  <meta property="og:image" content="https://<your-username>.github.io/<your-repo>/assets/social-card.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="DepAI Workshop 2025 — Deploying AI in Biomedical Informatics">
-  <meta name="twitter:description" content="DepAI: participatory workshop on AI deployment in biomedical informatics.">
-  <meta name="twitter:image" content="https://<your-username>.github.io/<your-repo>/assets/social-card.png">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "DepAI Workshop 2025 \u2014 Deploying AI in Biomedical Informatics", "description": "Participatory AMIA 2025 workshop: CFIR-guided strategies for real-world AI deployment across HIC/LMIC contexts.", "startDate": "2025-11-15T08:30:00-05:00", "endDate": "2025-11-15T12:00:00-05:00", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Room M101 \u00b7 Atlanta Marriott Marquis, Atlanta, GA", "address": {"@type": "PostalAddress", "addressLocality": "Atlanta", "addressRegion": "GA", "addressCountry": "US"}}, "organizer": {"@type": "Organization", "name": "AMIA Global Health Informatics Working Group"}, "keywords": "AI Deployment, Biomedical Informatics, Global Health, CFIR, Implementation Science, Health Equity", "image": ["https://<your-username>.github.io/<your-repo>/assets/social-card.png"], "offers": {"@type": "Offer", "url": "https://<your-username>.github.io/<your-repo>/", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "validFrom": "2025-08-01T00:00:00-04:00"}}</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
-  <header class="site-header">
-    <nav class="nav" aria-label="Primary">
-      <a class="brand" href="#top">DepAI 2025</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
-      <ul id="nav-links" class="nav-links">
-        <li><a href="#submissions">Overview</a></li>
-        <li><a href="#objectives">Objectives</a></li>
-        <li><a href="#schedule">Schedule</a></li>
-        <li><a href="#submissions">Submissions</a></li>
-        <li><a href="#speakers">Speakers</a></li>
-        <li><a href="#organizers">Organizers</a></li>
-        <li><a href="#venue">Venue</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DepAI Workshop 2025 — Deploying AI in Biomedical Informatics</title>
+    <meta
+      name="description"
+      content="Participatory AMIA 2025 workshop (DepAI): CFIR-guided strategies to overcome real‑world challenges in AI deployment for biomedical informatics."
+    />
+    <meta
+      name="keywords"
+      content="AI Deployment, Biomedical Informatics, Global Health, CFIR, Implementation Science, Health Equity"
+    />
+    <link
+      rel="canonical"
+      href="https://<your-username>.github.io/<your-repo>/"
+    />
+    <meta
+      property="og:title"
+      content="DepAI Workshop 2025 — Deploying AI in Biomedical Informatics"
+    />
+    <meta
+      property="og:description"
+      content="Hands-on, CFIR-based workshop to address bias, interoperability, equity, and scalability for AI in healthcare."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://<your-username>.github.io/<your-repo>/"
+    />
+    <meta
+      property="og:image"
+      content="https://<your-username>.github.io/<your-repo>/assets/social-card.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="DepAI Workshop 2025 — Deploying AI in Biomedical Informatics"
+    />
+    <meta
+      name="twitter:description"
+      content="DepAI: participatory workshop on AI deployment in biomedical informatics."
+    />
+    <meta
+      name="twitter:image"
+      content="https://<your-username>.github.io/<your-repo>/assets/social-card.png"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "DepAI Workshop 2025 \u2014 Deploying AI in Biomedical Informatics",
+        "description": "Participatory AMIA 2025 workshop: CFIR-guided strategies for real-world AI deployment across HIC/LMIC contexts.",
+        "startDate": "2025-11-15T08:30:00-05:00",
+        "endDate": "2025-11-15T12:00:00-05:00",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "Room M101 \u00b7 Atlanta Marriott Marquis, Atlanta, GA",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Atlanta",
+            "addressRegion": "GA",
+            "addressCountry": "US"
+          }
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "AMIA Global Health Informatics Working Group"
+        },
+        "keywords": "AI Deployment, Biomedical Informatics, Global Health, CFIR, Implementation Science, Health Equity",
+        "image": [
+          "https://<your-username>.github.io/<your-repo>/assets/social-card.png"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://<your-username>.github.io/<your-repo>/",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2025-08-01T00:00:00-04:00"
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <!--============== HEADER =============-->
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary">
+        <div class="nav__data">
+          <a href="#" class="nav__logo">
+            <i class="ri-slideshow-line"></i> DepAI 2025
+          </a>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__burger"></i>
+            <i class="ri-close-line nav__close"></i>
+          </div>
+        </div>
+
+        <!--============== NAV MENU =============-->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="#overview" class="nav__link">Overview</a></li>
+
+            <li><a href="#objectives" class="nav__link">Objectives</a></li>
+
+            <!--============== DROPDWON 1 =============-->
+            <li class="dropdown__item">
+              <div class="nav__link">
+                Event <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+            </li>
+
+            <!--============== DROPDWON 2 =============-->
+            <li class="dropdown__item">
+              <div class="nav__link">
+                People <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+            </li>
+
+            <li><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Lista principal de enlaces -->
+        <!-- <ul id="nav-links" class="nav-links">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#submissions">Submissions</a></li>
+          <li><a href="#">People</a></li>
+          <li><a href="#">Info</a></li>
+          
+           Grupo de personas
+          <li class="has-dropdown">
+            <a href="#">People</a>
+            <ul class="dropdown">
+              <li><a href="#speakers">Speakers</a></li>
+              <li><a href="#organizers">Organizers</a></li>
+            </ul>
+          </li> -->
+
+          
+      </nav>
+    </header>
+
     <section class="hero" id="top">
       <div class="hero-inner">
-        <h2>AMIA Global Health Informatics Working Group Collaborative Workshop on</h2> 
-        <h1>Identifying Solutions to Challenges to AI Deployment in Biomedical Informatics - DepAI</h1>
+        <h2>
+          AMIA Global Health Informatics Working Group Collaborative Workshop on
+        </h2>
+        <h1>
+          Identifying Solutions to Challenges to AI Deployment in Biomedical
+          Informatics - DepAI
+        </h1>
         <h2>Insights from the US and Beyond</h2>
         <p class="subtitle">CFIR-guided · Equity-focused · Participatory</p>
         <p class="meta">November 15, 2025 - Atlanta, GA, USA</p>
         <a class="btn primary" href="#submissions">Submissions open!</a>
       </div>
     </section>
-  </header>
 
-  <main id="content">
-    <section id="overview" class="section">
-      <h2>Overview</h2>
-      <p>
-        Artificial Intelligence (AI) offers transformative potential for biomedical informatics, improving diagnostics,
-        personalizing treatment, and accelerating research. Yet real-world deployment faces challenges such as algorithmic bias,
-        data interoperability, ethical concerns, and scalability constraints; risks that may widen health disparities if unaddressed.
-        This three‑hour <em>participatory</em> workshop uses the Consolidated Framework for Implementation Research (CFIR) to surface practical
-        strategies from both high‑resource and LMIC contexts, culminating in a co-created, generalizable framework for equitable AI implementation.
-      </p>
-      <p class="note"><strong>Participatory format:</strong> Attendees actively contribute to breakout discussions and the synthesis of a practical implementation framework.</p>
-    </section>
+    <main id="content">
+      <section id="overview" class="section">
+        <h2>Overview</h2>
+        <p>
+          Artificial Intelligence (AI) offers transformative potential for
+          biomedical informatics, improving diagnostics, personalizing
+          treatment, and accelerating research. Yet real-world deployment faces
+          challenges such as algorithmic bias, data interoperability, ethical
+          concerns, and scalability constraints; risks that may widen health
+          disparities if unaddressed. This three‑hour
+          <em>participatory</em> workshop uses the Consolidated Framework for
+          Implementation Research (CFIR) to surface practical strategies from
+          both high‑resource and LMIC contexts, culminating in a co-created,
+          generalizable framework for equitable AI implementation.
+        </p>
+        <p class="note">
+          <strong>Participatory format:</strong> Attendees actively contribute
+          to breakout discussions and the synthesis of a practical
+          implementation framework.
+        </p>
+      </section>
 
-    <section id="objectives" class="section alt">
-      <h2>Educational Objectives</h2>
-      <ul class="grid two">
-        <li>Analyze challenges and opportunities for AI in biomedical informatics across settings.</li>
-        <li>Apply CFIR to systematically assess and address implementation barriers.</li>
-        <li>Co‑create a set of actionable strategies adaptable to diverse healthcare environments.</li>
-        <li>Promote locally led, sustainable approaches that advance health equity.</li>
-      </ul>
-    </section>
-
-    <section id="schedule" class="section">
-      <h2>Program &amp; Schedule</h2>
-      <p class="meta">Program runs from <strong>8:30 AM</strong> to <strong>12:00 PM</strong>.</p>
-      
-
-      <div class="timeline">
-        <article class="slot">
-          <h3>8:30 – 9:20 · Panel Presentations</h3>
-<p>Short, insight‑dense talks (10 minutes each) from experts mapping real deployments to CFIR domains: intervention, outer/inner settings, individuals, and process. Talks highlight what worked, what failed, and the evidence behind each approach.</p>
-<p class="note"><em>Each panel presentation will last approximately 10 minutes.</em></p>
-        </article>
-        <article class="slot">
-          <h3>9:20 – 9:50 · Poster Session &amp; Walk</h3>
-<p>Guided walk‑through of accepted posters featuring implementation studies and case reports from HIC and LMIC contexts. Authors get rapid feedback; attendees collect concrete tactics and contacts for future collaboration.</p>
-        </article>
-        <article class="slot">
-          <h3>9:50 – 10:40 · Breakout Groups</h3>
-<p>Participants join small groups, each focused on a CFIR domain. Moderators guide structured discussion to identify barriers, facilitators, and <em>actionable strategies</em> for AI deployment across settings (HIC &amp; LMIC). Groups capture concise bullets for plenary.</p>
-        </article>
-        <article class="slot">
-          <h3>10:40 – 11:30 · Report Out &amp; Synthesis</h3>
-<p>All groups reconvene to share findings. We compare strategies across domains and co‑create a generalizable framework for equitable AI deployment. The synthesis will be shared publicly.</p>
-        </article>
-      </div>
-
-      <details class="accordion">
-        <summary>Breakout prompts by CFIR domain</summary>
-        <ul>
-          <li><strong>Intervention Characteristics:</strong> Adaptability, complexity, evidence strength, bias mitigation.</li>
-          <li><strong>Outer Setting:</strong> Regulatory environment, market dynamics, equity considerations.</li>
-          <li><strong>Inner Setting:</strong> Infrastructure readiness, leadership, workflows, communication.</li>
-          <li><strong>Individuals:</strong> Skills, beliefs, training, multi‑disciplinary collaboration.</li>
-          <li><strong>Process:</strong> Planning, execution, monitoring, iterative improvement and scale‑up.</li>
+      <section id="objectives" class="section alt">
+        <h2>Educational Objectives</h2>
+        <ul class="grid two">
+          <li>
+            Analyze challenges and opportunities for AI in biomedical
+            informatics across settings.
+          </li>
+          <li>
+            Apply CFIR to systematically assess and address implementation
+            barriers.
+          </li>
+          <li>
+            Co‑create a set of actionable strategies adaptable to diverse
+            healthcare environments.
+          </li>
+          <li>
+            Promote locally led, sustainable approaches that advance health
+            equity.
+          </li>
         </ul>
-      </details>
-    </section>
+      </section>
 
-    <section id="submissions" class="section">
-      <h2>Submissions · Call for Posters</h2>
-      <p>We invite poster submissions aligned with the themes of this workshop: real‑world challenges and solutions for <strong>AI deployment in biomedical informatics</strong>.</p>
-      <ul class="grid two">
-        <li>Algorithmic bias and fairness</li>
-        <li>Data interoperability and infrastructure</li>
-        <li>Implementation frameworks (e.g., CFIR)</li>
-        <li>Equity and inclusion in AI deployment</li>
-        <li>Case studies from HIC and LMIC contexts</li>
-        <li>Adoption, training, and capacity building</li>
-      </ul>
-      <h3>Instructions</h3>
-      <ul>
-        <li>Use the official <a href="https://brand.amia.org/m/95c9b4f4632c1fe/original/amia-symposium-template-paper-poster.docx" target="_blank" rel="noopener">AMIA Poster Template</a>.</li>
-        <li>Maximum length: <strong>1 page</strong> in PDF.</li>
-        <li>Submit via the <a href="https://app.oxfordabstracts.com/stages/79716/submitter" target="_blank" rel="noopener">submission form</a>.</li>
-      </ul>
-      <h3>Important Dates</h3>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      <section id="schedule" class="section">
+        <h2>Program &amp; Schedule</h2>
+        <p class="meta">
+          Program runs from <strong>8:30 AM</strong> to
+          <strong>12:00 PM</strong>.
+        </p>
+
+        <div class="timeline">
+          <article class="slot">
+            <h3>8:30 – 9:20 · Panel Presentations</h3>
+            <p>
+              Short, insight‑dense talks (10 minutes each) from experts mapping
+              real deployments to CFIR domains: intervention, outer/inner
+              settings, individuals, and process. Talks highlight what worked,
+              what failed, and the evidence behind each approach.
+            </p>
+            <p class="note">
+              <em
+                >Each panel presentation will last approximately 10 minutes.</em
+              >
+            </p>
+          </article>
+          <article class="slot">
+            <h3>9:20 – 9:50 · Poster Session &amp; Walk</h3>
+            <p>
+              Guided walk‑through of accepted posters featuring implementation
+              studies and case reports from HIC and LMIC contexts. Authors get
+              rapid feedback; attendees collect concrete tactics and contacts
+              for future collaboration.
+            </p>
+          </article>
+          <article class="slot">
+            <h3>9:50 – 10:40 · Breakout Groups</h3>
+            <p>
+              Participants join small groups, each focused on a CFIR domain.
+              Moderators guide structured discussion to identify barriers,
+              facilitators, and <em>actionable strategies</em> for AI deployment
+              across settings (HIC &amp; LMIC). Groups capture concise bullets
+              for plenary.
+            </p>
+          </article>
+          <article class="slot">
+            <h3>10:40 – 11:30 · Report Out &amp; Synthesis</h3>
+            <p>
+              All groups reconvene to share findings. We compare strategies
+              across domains and co‑create a generalizable framework for
+              equitable AI deployment. The synthesis will be shared publicly.
+            </p>
+          </article>
+        </div>
+
+        <details class="accordion">
+          <summary>Breakout prompts by CFIR domain</summary>
+          <ul>
+            <li>
+              <strong>Intervention Characteristics:</strong> Adaptability,
+              complexity, evidence strength, bias mitigation.
+            </li>
+            <li>
+              <strong>Outer Setting:</strong> Regulatory environment, market
+              dynamics, equity considerations.
+            </li>
+            <li>
+              <strong>Inner Setting:</strong> Infrastructure readiness,
+              leadership, workflows, communication.
+            </li>
+            <li>
+              <strong>Individuals:</strong> Skills, beliefs, training,
+              multi‑disciplinary collaboration.
+            </li>
+            <li>
+              <strong>Process:</strong> Planning, execution, monitoring,
+              iterative improvement and scale‑up.
+            </li>
+          </ul>
+        </details>
+      </section>
+
+      <section id="submissions" class="section">
+        <h2>Submissions · Call for Posters</h2>
+        <p>
+          We invite poster submissions aligned with the themes of this workshop:
+          real‑world challenges and solutions for
+          <strong>AI deployment in biomedical informatics</strong>.
+        </p>
+        <ul class="grid two">
+          <li>Algorithmic bias and fairness</li>
+          <li>Data interoperability and infrastructure</li>
+          <li>Implementation frameworks (e.g., CFIR)</li>
+          <li>Equity and inclusion in AI deployment</li>
+          <li>Case studies from HIC and LMIC contexts</li>
+          <li>Adoption, training, and capacity building</li>
+        </ul>
+        <h3>Instructions</h3>
+        <ul>
+          <li>
+            Use the official
+            <a
+              href="https://brand.amia.org/m/95c9b4f4632c1fe/original/amia-symposium-template-paper-poster.docx"
+              target="_blank"
+              rel="noopener"
+              >AMIA Poster Template</a
+            >.
+          </li>
+          <li>Maximum length: <strong>1 page</strong> in PDF.</li>
+          <li>
+            Submit via the
+            <a
+              href="https://app.oxfordabstracts.com/stages/79716/submitter"
+              target="_blank"
+              rel="noopener"
+              >submission form</a
+            >.
+          </li>
+        </ul>
+        <h3>Important Dates</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <div class="timeline-content">
+              <h4>Submission deadline</h4>
+              <p>October 20, 2025</p>
+            </div>
           </div>
-          <div class="timeline-content">
-            <h4>Submission deadline</h4>
-            <p>October 20, 2025</p>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div class="timeline-content">
+              <h4>Notification of acceptance</h4>
+              <p>October 27, 2025</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                ></polygon>
+              </svg>
+            </div>
+            <div class="timeline-content">
+              <h4>Workshop & Poster session</h4>
+              <p>November 15, 2025</p>
+            </div>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          </div>
-          <div class="timeline-content">
-            <h4>Notification of acceptance</h4>
-            <p>October 27, 2025</p>
-          </div>
+        <p class="note">
+          Deadlines are designed to allow at least
+          <strong>two weeks</strong> for printing after notification.
+        </p>
+        <h3>Opportunities</h3>
+        <p>
+          Selected posters will be showcased in our interactive poster walk. The
+          organizing team is coordinating <em>special invitations</em> for
+          accepted posters to submit to <em>PLOS Digital Health</em> and
+          <em>Frontiers in Digital Health</em> special topics.
+        </p>
+        <p>
+          <a
+            class="btn primary"
+            href="https://app.oxfordabstracts.com/stages/79716/submitter"
+            target="_blank"
+            rel="noopener"
+            >Submit your poster</a
+          >
+        </p>
+      </section>
+
+      <section id="speakers" class="section alt">
+        <h2>Speakers &amp; Moderators</h2>
+        <div class="cards avatars">
+          <article class="card">
+            <img
+              class="avatar"
+              src="assets/speakers/Mahony.jpg"
+              alt="Mahony Reategui-Rivera"
+              onerror="this.src='assets/speakers/placeholder.svg'"
+            />
+            <div>
+              <h3>Mahony Reategui‑Rivera, MD</h3>
+              <p>
+                <em>Panel:</em> Intervention Characteristics (bias mitigation,
+                adaptability, evidence strength)
+              </p>
+            </div>
+          </article>
+          <article class="card">
+            <img
+              class="avatar"
+              src="assets/speakers/Freddie.jpg"
+              alt="Freddie Seba"
+              onerror="this.src='assets/speakers/placeholder.svg'"
+            />
+            <div>
+              <h3>Freddie Seba, MBA, MA</h3>
+              <p>
+                <em>Panel:</em> Outer Setting (regulation, market dynamics,
+                equity)
+              </p>
+            </div>
+          </article>
+          <article class="card">
+            <img
+              class="avatar"
+              src="assets/speakers/Jose.jpg"
+              alt="Jose F. Florez-Arango"
+              onerror="this.src='assets/speakers/placeholder.svg'"
+            />
+            <div>
+              <h3>Jose F. Florez‑Arango, MD, MS, PhD</h3>
+              <p>
+                <em>Panel:</em> Inner Setting (infrastructure readiness,
+                leadership, workflows)
+              </p>
+            </div>
+          </article>
+          <article class="card">
+            <img
+              class="avatar"
+              src="assets/speakers/Humayera.jpg"
+              alt="Humayera Islam"
+              onerror="this.src='assets/speakers/placeholder.svg'"
+            />
+            <div>
+              <h3>Humayera Islam, PhD</h3>
+              <p>
+                <em>Panel:</em> Individuals (skills, beliefs, training,
+                collaboration)
+              </p>
+            </div>
+          </article>
+          <article class="card">
+            <img
+              class="avatar"
+              src="assets/speakers/Felix.jpg"
+              alt="Felix Holl"
+              onerror="this.src='assets/speakers/placeholder.svg'"
+            />
+            <div>
+              <h3>Felix Holl, PhD, MPH, M.Sc., FAMIA</h3>
+              <p>
+                <em>Panel:</em> Process (planning, execution, monitoring,
+                scale‑up)
+              </p>
+            </div>
+          </article>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-          </div>
-          <div class="timeline-content">
-            <h4>Workshop & Poster session</h4>
-            <p>November 15, 2025</p>
-          </div>
+      </section>
+
+      <section id="organizers" class="section">
+        <h2>Advisors &amp; Organizers</h2>
+        <ul class="grid two">
+          <li>Elizabeth Campbell, PhD, MS, MSPH</li>
+          <li>Amanda L. Joseph, MSc, FAMIA</li>
+          <li>Johana Kolosko, MD, MArch</li>
+          <li>AMIA Global Health Informatics Working Group</li>
+        </ul>
+      </section>
+
+      <section id="venue" class="section alt">
+        <h2>Venue</h2>
+        <p>Room M101 · Atlanta Marriott Marquis, Atlanta, GA</p>
+        <div class="map-embed">
+          <iframe
+            title="Map — Atlanta Marriott Marquis"
+            src="https://www.google.com/maps?q=Atlanta%20Marriott%20Marquis&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
-      </div>
-      <p class="note">Deadlines are designed to allow at least <strong>two weeks</strong> for printing after notification.</p>
-      <h3>Opportunities</h3>
-      <p>Selected posters will be showcased in our interactive poster walk. The organizing team is coordinating <em>special invitations</em> for accepted posters to submit to <em>PLOS Digital Health</em> and <em>Frontiers in Digital Health</em> special topics.</p>
-      <p><a class="btn primary" href="https://app.oxfordabstracts.com/stages/79716/submitter" target="_blank" rel="noopener">Submit your poster</a></p>
-    </section>
+        <p>
+          <em>Exact room confirmed:</em> Room M101. Check the AMIA Annual
+          Symposium program for any updates.
+        </p>
+      </section>
 
-    <section id="speakers" class="section alt">
-      <h2>Speakers &amp; Moderators</h2>
-      <div class="cards avatars">
-        <article class="card">
-          <img class="avatar" src="assets/speakers/Mahony.jpg" alt="Mahony Reategui-Rivera" onerror="this.src='assets/speakers/placeholder.svg'"/>
-          <div>
-            <h3>Mahony Reategui‑Rivera, MD</h3>
-            <p><em>Panel:</em> Intervention Characteristics (bias mitigation, adaptability, evidence strength)</p>
-          </div>
-        </article>
-        <article class="card">
-          <img class="avatar" src="assets/speakers/Freddie.jpg" alt="Freddie Seba" onerror="this.src='assets/speakers/placeholder.svg'"/>
-          <div>
-            <h3>Freddie Seba, MBA, MA</h3>
-            <p><em>Panel:</em> Outer Setting (regulation, market dynamics, equity)</p>
-          </div>
-        </article>
-        <article class="card">
-          <img class="avatar" src="assets/speakers/Jose.jpg" alt="Jose F. Florez-Arango" onerror="this.src='assets/speakers/placeholder.svg'"/>
-          <div>
-            <h3>Jose F. Florez‑Arango, MD, MS, PhD</h3>
-            <p><em>Panel:</em> Inner Setting (infrastructure readiness, leadership, workflows)</p>
-          </div>
-        </article>
-        <article class="card">
-          <img class="avatar" src="assets/speakers/Humayera.jpg" alt="Humayera Islam" onerror="this.src='assets/speakers/placeholder.svg'"/>
-          <div>
-            <h3>Humayera Islam, PhD</h3>
-            <p><em>Panel:</em> Individuals (skills, beliefs, training, collaboration)</p>
-          </div>
-        </article>
-        <article class="card">
-          <img class="avatar" src="assets/speakers/Felix.jpg" alt="Felix Holl" onerror="this.src='assets/speakers/placeholder.svg'"/>
-          <div>
-            <h3>Felix Holl, PhD, MPH, M.Sc., FAMIA</h3>
-            <p><em>Panel:</em> Process (planning, execution, monitoring, scale‑up)</p>
-          </div>
-        </article>
-      </div>
-    </section>
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>
+          Questions or want to present a poster about your global AI initiative?
+          Reach us at
+          <a href="mailto:mahony.reategui@utah.edu">mahony.reategui@utah.edu</a
+          >.
+        </p>
+      </section>
+    </main>
 
-    <section id="organizers" class="section">
-      <h2>Advisors &amp; Organizers</h2>
-      <ul class="grid two">
-        <li>Elizabeth Campbell, PhD, MS, MSPH</li>
-        <li>Amanda L. Joseph, MSc, FAMIA</li>
-        <li>Johana Kolosko, MD, MArch</li>
-        <li>AMIA Global Health Informatics Working Group</li>
-      </ul>
-    </section>
+    <footer class="site-footer">
+      <p>© 2025 DepAI Workshop · Built for GitHub Pages</p>
+    </footer>
 
-    
-    <section id="venue" class="section alt">
-      <h2>Venue</h2>
-      <p>Room M101 · Atlanta Marriott Marquis, Atlanta, GA</p>
-      <div class="map-embed">
-        <iframe
-          title="Map — Atlanta Marriott Marquis"
-          src="https://www.google.com/maps?q=Atlanta%20Marriott%20Marquis&output=embed"
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <p><em>Exact room confirmed:</em> Room M101. Check the AMIA Annual Symposium program for any updates.</p>
-    </section>
-
-
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Questions or want to present a poster about your global AI initiative? Reach us at
-        <a href="mailto:mahony.reategui@utah.edu">mahony.reategui@utah.edu</a>.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>© 2025 DepAI Workshop · Built for GitHub Pages</p>
-  </footer>
-
-  <script src="assets/script.js" defer></script>
-</body>
+    <script src="assets/script.js"></script>
+  </body>
 </html>
