@@ -32,12 +32,12 @@ document.querySelectorAll('.dropdown__item .nav__link').forEach(link => {
   });
 });
 
-// Cierra el dropdown al hacer clic fuera
-document.addEventListener('click', function(e) {
-  document.querySelectorAll('.dropdown__item.open').forEach(item => {
-    // Si el click NO fue dentro del dropdown__item, ciérralo
-    if (!item.contains(e.target)) {
+
+document.querySelectorAll('.dropdown__link').forEach(link => {
+  link.addEventListener('click', function() {
+    // Cierra todos los dropdowns abiertos
+    document.querySelectorAll('.dropdown__item.open').forEach(item => {
       item.classList.remove('open');
-    }
+    });
   });
 });
