@@ -21,10 +21,9 @@ mostrarMenu('nav-toggle', 'nav-menu');
 
 /*  SCRIPT PARA EL DROPWDOWN */
 document.querySelectorAll('.dropdown__item .nav__link').forEach(link => {
-  link.addEventListener('click', function(e) {
+  link.addEventListener('click', e => {
     e.preventDefault();
-    const item = this.parentElement;
-    // Cierra otros dropdowns si quieres solo uno abierto
+    const item = link.parentElement;
     document.querySelectorAll('.dropdown__item').forEach(i => {
       if(i !== item) i.classList.remove('open');
     });
@@ -32,12 +31,11 @@ document.querySelectorAll('.dropdown__item .nav__link').forEach(link => {
   });
 });
 
-
-document.querySelectorAll('.dropdown__link').forEach(link => {
-  link.addEventListener('click', function() {
-    // Cierra todos los dropdowns abiertos
-    document.querySelectorAll('.dropdown__item.open').forEach(item => {
+// Cierra dropdown al hacer clic fuera o al seleccionar una opción
+document.addEventListener('click', e => {
+  document.querySelectorAll('.dropdown__item.open').forEach(item => {
+    if (!item.contains(e.target) || e.target.classList.contains('dropdown__link')) {
       item.classList.remove('open');
-    });
+    }
   });
 });
