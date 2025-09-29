@@ -39,3 +39,17 @@ document.addEventListener('click', e => {
     }
   });
 });
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', e => {
+    const targetId = anchor.getAttribute('href').slice(1);
+    const target = document.getElementById(targetId);
+    if (target) {
+      e.preventDefault();
+      const navbar = document.querySelector('.site-header');
+      const navbarHeight = navbar ? navbar.offsetHeight : 0;
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+    }
+  });
+});
