@@ -52,6 +52,7 @@ a {
   box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3);
   z-index: 100;
   font-size: 20px;
+  font: "Bebas Neue";
 }
 
 /**============= NAV =============**/
@@ -81,12 +82,9 @@ a {
   display: inline-flex;
   align-items: center;
   column-gap: 0.25rem;
-  font-weight: 600;
-}
-
-.nav__logo i {
-  font-weight: initial;
-  font-size: 1.25rem;
+  font-weight: 700;
+  font-size: 30px;
+  font: "Bebas Neue", cursive;
 }
 
 .nav__toggle {
@@ -140,12 +138,13 @@ a {
 .nav__link {
   color: white;
   background-color: #1c1a33;
-  font-weight: 500;
+  font-weight: 700;
   padding: 1.25rem 1.15rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s;
+  font: "Bebas Neue";
 }
 
 .nav__link:hover {
@@ -188,8 +187,9 @@ a {
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
-  font-weight: 500;
+  font-weight: 700;
   transition: background-color 0.3s;
+  font: "Bebas Neue";
 }
 
 .dropdown__link i {
@@ -220,9 +220,10 @@ a {
 }
 
 /*? FOR SMALL DEVICES */
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 600px) {
   .container {
     margin-inline: 1rem;
+    margin: 0;
   }
 
   .nav__link {
@@ -231,7 +232,7 @@ a {
 }
 
 /*? FOR LARGE DEVICES */
-@media screen and (min-width: 1118px) {
+@media screen and (min-width: 1024px) {
   .container {
     margin-inline: auto;
   }
@@ -300,8 +301,7 @@ a {
   position: relative; /* necesario para overlay y pseudo-elementos */
   padding-top: 300px;
   padding: 90px 40px;
-  background: 
-    radial-gradient(
+  background: radial-gradient(
       1000px 500px at 50% -40%,
       #22335a 0%,
       transparent 60%
@@ -318,8 +318,8 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('background-hero.jpg') center/cover no-repeat; /* coloca aquí tu imagen */
-  filter: blur(2px) brightness(0.6); /* difumina y oscurece la imagen */
+  background: url("background-hero.jpg") center/cover no-repeat; /* coloca aquí tu imagen */
+  filter: brightness(0.5); /* difumina y oscurece la imagen */
   z-index: 0; /* detrás del contenido */
 }
 
@@ -342,7 +342,6 @@ a {
 .hero h2 {
   font-size: 20px;
   line-height: 1.1;
-  margin: 0 0 8px;
 }
 .subtitle {
   color: var(--muted);
@@ -353,8 +352,9 @@ a {
 .meta {
   color: var(--muted);
   font-size: 14px;
-  margin: 0 0 90px;
+  margin-bottom: 30px;
   color: white;
+  font-weight: 450;
 }
 .btn {
   display: inline-block;
@@ -363,7 +363,7 @@ a {
   border: 1px solid #2a355c;
 }
 .btn.primary {
-  background: linear-gradient(90deg, #3dcef3, #1a17bb);
+  background: linear-gradient(90deg, #4b99ad, #34345c);
   color: white;
   font-weight: 700;
   font-size: 1.5rem;
@@ -380,13 +380,13 @@ a {
 /* Efecto al pasar el mouse */
 .btn.primary:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 32px #8fff8f44;
+  box-shadow: 0 8px 32px #a9aab1f7;
 }
 
 /* Efecto al presionar */
 .btn.primary:active {
   transform: scale(0.9);
-  box-shadow: 0 2px 8px #6be3ff44;
+  box-shadow: 0 2px 8px #a9aab1f7;
 }
 
 /* Responsivo en móviles */
@@ -396,12 +396,26 @@ a {
     padding: 0.8rem 1.5rem;
     border-radius: 1rem;
   }
+  .hero {
+    height: 400px;
+    padding: 40px 20px;
+  }
+  .hero h1 {
+    font-size: 20px;
+  }
+  .hero h2 {
+    font-size: 13px;
+  }
+  .subtitle {
+    font-size: 13px;
+  }
+  .meta {
+    font-size: 12px;
+  }
+  .hero-inner {
+    padding-top: 50px;
+  }
 }
-
-
-
-
-
 
 .section {
   padding: 36px 18px;
@@ -411,7 +425,6 @@ a {
 .section.alt {
   background: linear-gradient(180deg, var(--alt), transparent);
 }
-
 
 .grid.two {
   display: grid;
@@ -474,7 +487,7 @@ a {
   box-shadow: 0 0 0 4px var(--ring);
 }
 
-@media (max-width: 760px) {
+/* @media (max-width: 760px) {
   .nav-toggle {
     display: block;
   }
@@ -495,7 +508,7 @@ a {
   .hero h1 {
     font-size: 30px;
   }
-}
+} */
 
 /* Responsive Google Map */
 .map-embed {
