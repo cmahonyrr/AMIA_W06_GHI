@@ -24,7 +24,8 @@ body {
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
     sans-serif;
   color: var(--fg);
-  background: linear-gradient(180deg, var(--bg), #0a0c10) fixed;
+
+  background: url("background-body.jpg") center/cover no-repeat fixed;
 }
 
 ul {
@@ -60,7 +61,7 @@ img {
   font: "Bebas Neue";
 }
 
-/**ANCHOR - NAV*/
+/**SECTION - NAV*/
 .nav {
   height: 3.5rem;
 }
@@ -114,7 +115,7 @@ img {
   opacity: 0;
 }
 
-/**ANCHOR - NAVIGATION FOR MOBILE DEVICES*/
+/**LINK - NAVIGATION FOR MOBILE DEVICES*/
 @media screen and (max-width: 800px) {
   .nav__menu {
     position: absolute;
@@ -173,7 +174,7 @@ img {
   transform: rotate(90deg);
 }
 
-/**ANCHOR - DROPDOWN*/
+/**LINK - DROPDOWN*/
 .dropdown__item {
   position: relative;
   cursor: pointer;
@@ -304,8 +305,9 @@ img {
     top: 100%;
   }
 }
+/*!SECTION */
 
-/**ANCHOR - SECTION HERO*/
+/**SECTION - SECTION HERO*/
 .hero {
   position: relative; /* necesario para overlay y pseudo-elementos */
   padding-top: 300px;
@@ -319,7 +321,7 @@ img {
   overflow: hidden; /* para que el blur no sobresalga */
 }
 
-/**ANCHOR - HERO IMAGE*/
+/**LINK - HERO IMAGE*/
 .hero::before {
   content: "";
   position: absolute;
@@ -332,24 +334,26 @@ img {
   z-index: 0; /* detrás del contenido */
 }
 
-/**ANCHOR - TEXTO SOBRE LA IMAGEN*/
+/**LINK - TEXTO SOBRE LA IMAGEN*/
 .hero-inner {
   position: relative; /* para estar sobre el blur */
   max-width: 1000px;
   margin: 0 auto;
-  padding-top: 70px;
+  padding-top: 0px;
   text-align: center;
   z-index: 1;
 }
 
-/**ANCHOR - TIPOGRAFIA Y BOTONES EN HERO*/
+/**LINK - TIPOGRAFIA Y BOTONES EN HERO*/
 .hero h1 {
   font-size: 60px;
   line-height: 1.1;
   margin: 0 0 8px;
 }
 .hero h2 {
-  font-size: 20px;
+  font-style: italic;
+  font-size: 36px;
+  font-weight: 400;
   line-height: 1.1;
 }
 .subtitle {
@@ -372,7 +376,7 @@ img {
   border: 1px solid #2a355c;
 }
 .btn.primary {
-  background: linear-gradient(90deg, #4b99ad, #34345c);
+  background: linear-gradient(90deg, #4b99ad, #536d89);
   color: white;
   font-weight: 700;
   font-size: 1.5rem;
@@ -388,17 +392,17 @@ img {
 
 /* Efecto al pasar el mouse */
 .btn.primary:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 32px #a9aab1f7;
+  transform: scale(1.09);
+  box-shadow: 0 8px 32px #d0d1ddf7;
 }
 
 /* Efecto al presionar */
 .btn.primary:active {
   transform: scale(0.9);
-  box-shadow: 0 2px 8px #a9aab1f7;
+  box-shadow: 0 2px 8px #343539f7;
 }
 
-/**ANCHOR - FOR MOBILE DEVCES*/
+/**LINK - FOR MOBILE DEVCES*/
 @media (max-width: 600px) {
   .btn.primary {
     font-size: 1rem;
@@ -406,14 +410,14 @@ img {
     border-radius: 1rem;
   }
   .hero {
-    height: 380px;
+    height: auto;
     padding: 40px 20px;
   }
   .hero h1 {
     font-size: 20px;
   }
   .hero h2 {
-    font-size: 13px;
+    font-size: 17px;
   }
   .subtitle {
     font-size: 13px;
@@ -425,13 +429,18 @@ img {
     padding-top: 50px;
   }
 }
+/*!SECTION */
 
-/**ANCHOR - MAIN*/
+/**SECTION - MAIN*/
 
-/**ANCHOR - OVERVIEW*/
+/**LINK - OVERVIEW*/
 
 #overview {
-  padding-top: 20px;
+  padding-top: 50px;
+  position: relative;
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.7) 100%);
+  height: 380px;
+  font-weight: 700;
 }
 
 #overview h2 {
@@ -442,22 +451,26 @@ img {
 
 #overview p {
   font-size: 18px;
+  padding: 0 150px;
+}
+
+.note {
+  margin: 0;
 }
 
 @media (max-width: 600px) {
+  #overview {
+    height: auto; /* altura automática para adaptarse al contenido */
+    padding: 20px 10px; /* menos padding para pantallas pequeñas */
+  }
   #overview h2 {
     font-size: 28px;
   }
   #overview p {
     font-size: 14px;
+    padding: 0 20px; /* mucho más estrecho en pantallas pequeñas */
+    text-align: justify;
   }
-}
-
-#overview {
-  padding: 36px 18px;
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: justify;
 }
 
 .section {
@@ -467,51 +480,52 @@ img {
   text-align: justify;
 }
 
-/**ANCHOR - EDUCATIONAL OBJECTIVES*/
-/* .grid.two {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 10px;
-} */
+/**LINK - EDUCATIONAL OBJECTIVES*/
 
-.card {
+#objectives {
   display: grid;
   place-items: center;
-  padding-block: 4.5rem;
+  padding: 60px;
+  background: linear-gradient(135deg, #2d3a63 0%, #4b99ad 50%, #9abdd9 100%);
+}
+
+#objectives h2 {
+  text-align: center;
+  font-size: 40px;
+  margin: 0;
+  padding: 30px 0;
 }
 
 .card__container {
-  margin-inline: 1.5rem;
+  margin-inline: 90px;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 2rem;
+  padding-bottom: 60px;
 }
 
 .card__article {
+  width: 210px;
   position: relative;
-  background-color: #0c2152;
-  padding: 2.5rem;
-  border-radius: 2rem;
+  background-color: #a8ebe9;
+  padding: 2rem;
+  border-radius: 5rem;
   text-align: center;
-  box-shadow: 0 20px 24px hsla(235, 32%, 25%, 0.2);
+  box-shadow: 0 20px 24px hsla(235, 80%, 10%, 0.5);
   overflow: hidden;
 }
 
 .card__img {
-  width: 250px;
-  margin-bottom: 1rem;
-  animation: float-img 2.5s ease-in-out infinite;
-}
-
-.card__title {
-  color: white;
-  font-size: 30px;
-  line-height: 100%;
-  margin-bottom: 1rem;
+  width: 100px;
+  margin: 1.5rem 0;
+  animation: float-img 1.5s ease-in-out infinite;
 }
 
 .card__description {
-  font-size: 40px;
+  color: var(--bg);
+  height: 80px;
+  font-size: 14px;
+  font-weight: 1000;
 }
 
 .card__data {
@@ -530,48 +544,65 @@ img {
 }
 
 /* For small devices */
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 700px) {
+  #objectives {
+    display: grid;
+    place-items: center;
+    padding: 0px;
+    background: linear-gradient(135deg, #2d3a63 0%, #4b99ad 50%, #9abdd9 100%);
+  }
+  #objectives h2{
+    padding-top: 30px;
+    font-size: 25px;
+  }
   .card__container {
-    margin-inline: 1rem;
+    margin: 0;
+    grid-template-columns: repeat(2, auto); /* 2 columnas fijas de 130px */
+    column-gap: 2rem;         /* separación entre columnas */
+    row-gap: 1rem;            /* separación entre filas */
+    padding-bottom: 60px;     
   }
   .card__article {
-    padding: 1.5rem;
+    padding: 1rem;
+    width: 120px;
+    border-radius: 3rem;
   }
   .card__img {
-    width: 160px;
+    width: 60px;
+    margin: 0;
+    padding-top: 20px;
   }
   .card__title {
     font-size: 2rem;
   }
-}
-
-
-@media screen and (min-width: 440px) {
-  .card__container {
-    grid-template-columns: 328px;
+  .card__description {
+    color: var(--bg);
+    height: 60px;
+    font-size: 9px;
+    font-weight: 1000;
+    margin: auto;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .card__container {
-    grid-template-columns: repeat(2, 328px);
-    column-gap: 2rem;
-  }
-}
-
-
+/* For large devices */
 @media screen and (min-width: 1100px) {
-  .card {
-    height: 100vh;
+  #objectives {
+    padding: 0;
   }
-
   .card__container {
-    grid-template-columns: repeat(4, 328px);
+    grid-template-columns: repeat(4, 250px);
   }
 }
 
-/*SECTION OTROS*/
+/**LINK - SCHEDULE*/
 
+#schedule{
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.7) 100%);
+}
+
+#schedule h2 {
+  margin: 0;
+}
 .timeline {
   border-left: 2px dashed #2a355c;
   margin: 8px 0 0;
@@ -585,6 +616,73 @@ img {
   background: var(--card);
   box-shadow: 0 0 0 4px var(--ring);
 }
+.note {
+  color: var(--muted);
+}
+
+.accordion summary {
+  cursor: pointer;
+  font-weight: 600;
+  margin: 12px 0;
+}
+
+/**LINK - SUBMISSIONS*/
+#submissions {
+  background: linear-gradient(135deg, #2d3a63 0%, #59818b 50%, #385267 100%);
+}
+
+#submissions h2{
+  margin: 0;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-icon {
+  position: absolute;
+  /* Mueve el icono a la izquierda para alinearlo con el padding */
+  left: -60px;
+  top: -2px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* Usa tu color de marca principal para el fondo del icono */
+  background-color: var(--brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-icon svg {
+  width: 20px;
+  height: 20px;
+  /* El icono será oscuro para contrastar con el fondo claro de la marca */
+  color: var(--bg);
+}
+
+.timeline-content h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  /* Usa tu color de texto principal */
+  color: var(--fg);
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 1rem;
+  /* Usa tu color de texto "apagado" o secundario */
+  color: var(--muted);
+}
+
+/*SECTION OTROS*/
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -602,14 +700,8 @@ img {
   padding: 16px;
   box-shadow: 0 10px 30px #00000033;
 }
-.note {
-  color: var(--muted);
-}
-.accordion summary {
-  cursor: pointer;
-  font-weight: 600;
-  margin: 12px 0;
-}
+
+
 .site-footer {
   padding: 24px;
   color: var(--muted);
@@ -682,48 +774,4 @@ img {
   background-color: #2a355c; /* Color consistente con tus bordes */
 }
 
-.timeline-item {
-  position: relative;
-  margin-bottom: 2rem;
-}
 
-.timeline-item:last-child {
-  margin-bottom: 0;
-}
-
-.timeline-icon {
-  position: absolute;
-  /* Mueve el icono a la izquierda para alinearlo con el padding */
-  left: -60px;
-  top: -2px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  /* Usa tu color de marca principal para el fondo del icono */
-  background-color: var(--brand);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.timeline-icon svg {
-  width: 20px;
-  height: 20px;
-  /* El icono será oscuro para contrastar con el fondo claro de la marca */
-  color: var(--bg);
-}
-
-.timeline-content h4 {
-  margin: 0 0 0.25rem 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  /* Usa tu color de texto principal */
-  color: var(--fg);
-}
-
-.timeline-content p {
-  margin: 0;
-  font-size: 1rem;
-  /* Usa tu color de texto "apagado" o secundario */
-  color: var(--muted);
-}
