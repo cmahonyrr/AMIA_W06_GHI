@@ -28,9 +28,7 @@ body {
   background: url("background-body.jpg") center/cover no-repeat fixed;
 }
 
-ul {
-  list-style: none;
-}
+
 
 a {
   text-decoration: none;
@@ -62,6 +60,11 @@ img {
 }
 
 /**SECTION - NAV*/
+
+header ul{
+  list-style: none;
+}
+
 .nav {
   height: 3.5rem;
 }
@@ -518,7 +521,7 @@ img {
 .card__img {
   width: 100px;
   margin: 1.5rem 0;
-  animation: float-img 1.5s ease-in-out infinite;
+  animation: float-img 1.7s ease-in-out infinite;
 }
 
 .card__description {
@@ -551,16 +554,16 @@ img {
     padding: 0px;
     background: linear-gradient(135deg, #2d3a63 0%, #4b99ad 50%, #9abdd9 100%);
   }
-  #objectives h2{
+  #objectives h2 {
     padding-top: 30px;
     font-size: 25px;
   }
   .card__container {
     margin: 0;
     grid-template-columns: repeat(2, auto); /* 2 columnas fijas de 130px */
-    column-gap: 2rem;         /* separación entre columnas */
-    row-gap: 1rem;            /* separación entre filas */
-    padding-bottom: 60px;     
+    column-gap: 2rem; /* separación entre columnas */
+    row-gap: 1rem; /* separación entre filas */
+    padding-bottom: 60px;
   }
   .card__article {
     padding: 1rem;
@@ -596,34 +599,258 @@ img {
 
 /**LINK - SCHEDULE*/
 
-#schedule{
-  background: linear-gradient(135deg, rgba(10, 10, 10, 0.7) 100%);
+#schedule {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 100%);
+  padding: 40px 100px;
+  position: relative;
 }
 
 #schedule h2 {
   margin: 0;
-}
-.timeline {
-  border-left: 2px dashed #2a355c;
-  margin: 8px 0 0;
-  padding-left: 18px;
-}
-.slot {
-  margin: 8px 0;
-  padding: 8px 12px;
-  border: 1px solid #212945;
-  border-radius: 14px;
-  background: var(--card);
-  box-shadow: 0 0 0 4px var(--ring);
-}
-.note {
-  color: var(--muted);
+  text-align: center;
+  font-size: 40px;
 }
 
+#schedule h3 {
+  margin: 0;
+}
+
+#schedule .meta {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+/* ===== TIMELINE ===== */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* línea central */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, #00ffff, #0066ff, #8a2be2);
+  border-radius: 4px;
+  z-index: 0;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 102, 255, 0.6);
+}
+
+/* eventos izquierda */
+.time_item {
+  width: 50%;
+  padding: 20px 40px;
+  position: relative;
+  left: 0;
+  text-align: right;
+}
+
+/* eventos derecha */
+.time_item2 {
+  width: 50%;
+  padding: 20px 40px;
+  position: relative;
+  left: 50%;
+  text-align: left;
+}
+
+/* caja evento */
+.slot {
+  display: inline-block;
+  margin: 8px 0;
+  padding: 10px 12px;
+  border: 1px solid #3d6486;
+  border-radius: 14px;
+  background: #121d42;
+  box-shadow: 0 0 0 4px white, 0 0 20px #02dbdb, 0 0 30px #0066ff;
+  max-width: 380px;
+  text-align: left;
+}
+
+.time_item,
+.time_item2 {
+  position: relative; /* Necesario para que ::after se ancle a cada tarjeta */
+}
+
+/* Puntos de conexión */
+.time_item::after,
+.time_item2::after {
+  content: "";
+  position: absolute;
+  top: 50%; /* centrado verticalmente en el rectángulo */
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #00ffff 40%, #0066ff 100%);
+  border: 3px solid #fff;
+  box-shadow: 0 0 8px #00ffff, 0 0 15px #0066ff,
+    0 0 25px rgba(138, 43, 226, 0.7);
+  z-index: 2;
+}
+
+/* Ajustes de posición respecto a la línea */
+.time_item::after {
+  right: -10px; /* conecta con la línea central */
+}
+.time_item2::after {
+  left: -10px;
+}
+
+/* notas */
+.note {
+  color: var(--muted);
+  font-size: 0.9em;
+}
+
+/* === Caja del acordeón === */
+.accordion {
+  margin: 40px 100px 0 100px;
+  padding: 16px;
+  border: 1px white;
+  border-radius: 12px;
+  background: #101421;
+  box-shadow: 0 0 0 4px white, 0 0 10px #02dbdb, 0 0 30px #0066ff;
+  color: #e6f7ff; /* texto más claro */
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* === Título clickable (summary) === */
 .accordion summary {
   cursor: pointer;
   font-weight: 600;
-  margin: 12px 0;
+  font-size: 1.1em;
+  list-style: none;
+  outline: none;
+  color: #ffffff;
+  margin: 0;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px; /* espacio entre flecha e texto */
+}
+
+.accordion summary:hover {
+  color: #1defe5;
+}
+
+/* === Flecha RemixIcon con animación === */
+.accordion .dropdown__arrow {
+  font-size: 1.2em;
+  color: #00ffff;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion[open] .dropdown__arrow {
+  transform: rotate(180deg) scale(1.1);
+}
+
+/* === Lista interna === */
+.accordion ul {
+  margin: 12px 0 0;
+  padding-left: 20px;
+  line-height: 1.6;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.45s ease;
+}
+
+.accordion[open] ul {
+  opacity: 1;
+  max-height: 600px;
+}
+
+/* === Animación de items === */
+.accordion[open] ul li {
+  opacity: 0;
+  animation: fadeSlide 0.5s ease forwards;
+}
+
+/* animación escalonada */
+.accordion[open] ul li:nth-child(1) { animation-delay: 0.05s; }
+.accordion[open] ul li:nth-child(2) { animation-delay: 0.1s; }
+.accordion[open] ul li:nth-child(3) { animation-delay: 0.15s; }
+.accordion[open] ul li:nth-child(4) { animation-delay: 0.2s; }
+.accordion[open] ul li:nth-child(5) { animation-delay: 0.25s; }
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* === Items === */
+.accordion li {
+  margin: 6px 0;
+  position: relative;
+  color: #f0f8ff;
+}
+
+.accordion li::before {
+  content: "●";
+  position: absolute;
+  left: -16px;
+  color: #00ffff;
+  text-shadow: 0 0 6px #0066ff;
+}
+
+@media screen and (max-width: 700px) {
+  
+  #schedule {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 100%);
+    padding: 40px 10px;
+    position: relative;
+  }
+
+  /* timeline: la línea central pasa al lado izquierdo */
+  .timeline::before {
+    left: 26px; /* mueve la línea a la izquierda */
+    transform: none;
+  }
+
+  /* todos los items ocupan el ancho completo */
+  .time_item,
+  .time_item2 {
+    width: 100%;
+    padding: 20px 30px 20px 60px; /* deja espacio a la izquierda para la línea */
+    text-align: left; /* todo alineado a la izquierda */
+    left: 0; /* resetea el desplazamiento */
+  }
+
+  /* puntos de conexión (siempre al lado de la línea) */
+  .time_item::after,
+  .time_item2::after {
+    left: 18px; /* centrados en la línea que movimos */
+    right: auto;
+  }
+
+  .slot{
+    font-size: 15px;
+  }
+
+  .accordion {
+    margin: 20px 10px 0 10px;
+    padding: 12px;
+    font-size: 12px;
+  }
+
 }
 
 /**LINK - SUBMISSIONS*/
@@ -631,7 +858,7 @@ img {
   background: linear-gradient(135deg, #2d3a63 0%, #59818b 50%, #385267 100%);
 }
 
-#submissions h2{
+#submissions h2 {
   margin: 0;
 }
 
@@ -700,7 +927,6 @@ img {
   padding: 16px;
   box-shadow: 0 10px 30px #00000033;
 }
-
 
 .site-footer {
   padding: 24px;
@@ -773,5 +999,3 @@ img {
   width: 2px;
   background-color: #2a355c; /* Color consistente con tus bordes */
 }
-
-
