@@ -2,8 +2,8 @@
   --bg: #0e0f12;
   --fg: #e8eaf1;
   --muted: #a9b0c9;
-  --brand: #6be3ff;
-  --acc: #8fff8f;
+  --brand: #4ba9be;
+  --acc: #38c7a1;
   --card: #171923;
   --alt: #0f1320;
   --ring: #6be3ff33;
@@ -27,8 +27,6 @@ body {
 
   background: url("background-body.jpg") center/cover no-repeat fixed;
 }
-
-
 
 a {
   text-decoration: none;
@@ -61,7 +59,7 @@ img {
 
 /**SECTION - NAV*/
 
-header ul{
+header ul {
   list-style: none;
 }
 
@@ -372,13 +370,13 @@ header ul{
   color: white;
   font-weight: 450;
 }
-.btn {
+.hero .btn {
   display: inline-block;
   padding: 30px 80px;
   border-radius: 14px;
   border: 1px solid #2a355c;
 }
-.btn.primary {
+.hero .btn.primary {
   background: linear-gradient(90deg, #4b99ad, #536d89);
   color: white;
   font-weight: 700;
@@ -394,20 +392,20 @@ header ul{
 }
 
 /* Efecto al pasar el mouse */
-.btn.primary:hover {
+.hero .btn.primary:hover {
   transform: scale(1.09);
   box-shadow: 0 8px 32px #d0d1ddf7;
 }
 
 /* Efecto al presionar */
-.btn.primary:active {
+.hero .btn.primary:active {
   transform: scale(0.9);
   box-shadow: 0 2px 8px #343539f7;
 }
 
 /**LINK - FOR MOBILE DEVCES*/
 @media (max-width: 600px) {
-  .btn.primary {
+  .hero .btn.primary {
     font-size: 1rem;
     padding: 0.8rem 1.5rem;
     border-radius: 1rem;
@@ -489,7 +487,7 @@ header ul{
   display: grid;
   place-items: center;
   padding: 60px;
-  background: linear-gradient(135deg, #2d3a63 0%, #4b99ad 50%, #9abdd9 100%);
+  background: linear-gradient(135deg, #2d3a63 0%, #316572 50%, #2d3a63 100%);
 }
 
 #objectives h2 {
@@ -512,9 +510,9 @@ header ul{
   position: relative;
   background-color: #a8ebe9;
   padding: 2rem;
-  border-radius: 5rem;
+  border-radius: 10rem;
   text-align: center;
-  box-shadow: 0 20px 24px hsla(235, 80%, 10%, 0.5);
+  box-shadow: 0 0 0 2px white, 0 20px 24px hsla(235, 80%, 10%, 0.5);
   overflow: hidden;
 }
 
@@ -706,7 +704,7 @@ header ul{
 }
 
 /* notas */
-.note {
+.timeline .note {
   color: var(--muted);
   font-size: 0.9em;
 }
@@ -777,11 +775,21 @@ header ul{
 }
 
 /* animación escalonada */
-.accordion[open] ul li:nth-child(1) { animation-delay: 0.05s; }
-.accordion[open] ul li:nth-child(2) { animation-delay: 0.1s; }
-.accordion[open] ul li:nth-child(3) { animation-delay: 0.15s; }
-.accordion[open] ul li:nth-child(4) { animation-delay: 0.2s; }
-.accordion[open] ul li:nth-child(5) { animation-delay: 0.25s; }
+.accordion[open] ul li:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.accordion[open] ul li:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.accordion[open] ul li:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.accordion[open] ul li:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.accordion[open] ul li:nth-child(5) {
+  animation-delay: 0.25s;
+}
 
 @keyframes fadeSlide {
   from {
@@ -812,11 +820,22 @@ header ul{
 }
 
 @media screen and (max-width: 700px) {
-  
   #schedule {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 100%);
     padding: 40px 10px;
     position: relative;
+  }
+
+  #schedule h2 {
+    font-size: 22px;
+  }
+
+  #schedule .meta {
+    font-size: 12px;
+  }
+
+  .timeline {
+    padding: 0;
   }
 
   /* timeline: la línea central pasa al lado izquierdo */
@@ -841,7 +860,7 @@ header ul{
     right: auto;
   }
 
-  .slot{
+  .slot {
     font-size: 15px;
   }
 
@@ -850,62 +869,276 @@ header ul{
     padding: 12px;
     font-size: 12px;
   }
-
 }
 
 /**LINK - SUBMISSIONS*/
 #submissions {
-  background: linear-gradient(135deg, #2d3a63 0%, #59818b 50%, #385267 100%);
+  background: linear-gradient(135deg, #2d3a63 0%, #316572 50%, #2d3a63 100%);
+  padding: 30px 200px;
 }
 
 #submissions h2 {
   margin: 0;
 }
 
-.timeline-item {
+/* === Contenedor principal === */
+.submssions__poster {
+  margin: 0;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* === Título === */
+.submssions__poster h2 {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: left; /* ahora a la izquierda */
+  color: #ffffff;
+}
+
+/* === Párrafo === */
+.submssions__poster p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  text-align: left; /* ahora a la izquierda */
+  color: #ffffff;
+}
+
+/* === Lista en grid === */
+.submssions__poster ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 24px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.submssions__poster li {
   position: relative;
-  margin-bottom: 2rem;
+  padding-left: 18px;
+  font-size: 0.95rem;
+  color: #ffffff;
+  text-align: left; /* aseguramos alineación */
 }
 
-.timeline-item:last-child {
-  margin-bottom: 0;
-}
-
-.timeline-icon {
+/* Puntito decorativo en cada ítem */
+.submssions__poster li::before {
+  content: "●";
   position: absolute;
-  /* Mueve el icono a la izquierda para alinearlo con el padding */
-  left: -60px;
-  top: -2px;
-  width: 40px;
-  height: 40px;
+  left: 0;
+  color: #00d7fd;
+  text-shadow: 0 0 6px #0066ff;
+}
+
+/* === Contenedor === */
+.submissions__instruction {
+  margin: 30px 0px;
+  max-width: 700px;
+  line-height: 1.6;
+  color: #f5faff; /* texto claro */
+}
+
+/* === Título === */
+.submissions__instruction h3 {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: left; /* ahora a la izquierda */
+  color: #ffffff; /* blanco puro */
+}
+
+/* === Lista === */
+.submissions__instruction ul {
+  padding: 0;
+  list-style: none; /* quitamos disc para usar pseudo-elemento */
+}
+
+.submissions__instruction li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #e6f7ff; /* blanco azulado */
+  position: relative;
+  padding-left: 18px; /* espacio para el bullet */
+}
+
+/* Bullet decorativo (puntito a la izquierda) */
+.submissions__instruction li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: #00d7fd;
+  text-shadow: 0 0 6px #0066ff;
+}
+
+/* === Links llamativos === */
+.submissions__instruction a {
+  color: #00ffff;
+  font-weight: 900;
+  text-decoration: none;
+  border-bottom: 3px solid #00ffff;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.submissions__instruction a:hover {
+  color: #2210e8;
+  border-color: #2210e8;
+}
+
+/* === Contenedor principal === */
+.submissions__dates {
+  margin: 30px 0px;
+  max-width: 700px;
+  text-align: left;
+}
+
+/* === Título === */
+.submissions__dates h3 {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: left; /* ahora a la izquierda */
+  color: #ffffff; /* blanco puro */
+}
+
+/* === Lista === */
+.dates-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Cada ítem === */
+.date-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+/* Iconos dentro de un círculo */
+.date-item i {
+  font-size: 1.3rem;
+  color: #19374c;
+  background: #00ffff;
   border-radius: 50%;
-  /* Usa tu color de marca principal para el fondo del icono */
-  background-color: var(--brand);
+  width: 38px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 10px #0066ff;
 }
 
-.timeline-icon svg {
-  width: 20px;
-  height: 20px;
-  /* El icono será oscuro para contrastar con el fondo claro de la marca */
-  color: var(--bg);
-}
-
-.timeline-content h4 {
-  margin: 0 0 0.25rem 0;
+/* Texto */
+.date-info h4 {
+  margin: 0 0 4px 0;
   font-size: 1.1rem;
   font-weight: 600;
-  /* Usa tu color de texto principal */
-  color: var(--fg);
+  color: #ffffff;
 }
 
-.timeline-content p {
+.date-info p {
   margin: 0;
+  font-size: 0.95rem;
+  color: #e0f7ff;
+}
+
+.submissions__dates .note {
+  font-size: 0.9em;
+  color: white;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+.submissions__opportunity {
+  max-width: 1800px;
+  line-height: 1.6;
+}
+
+.submissions__opportunity h3 {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: left; /* ahora a la izquierda */
+  color: #ffffff; /* blanco puro */
+}
+
+.submissions__opportunity p {
+  width: 100%;
+  margin: 0;
+  font-weight: 500;
+  padding-bottom: 30px;
+}
+
+.btn_submission {
+  text-align: center;
+}
+
+.submissions__opportunity .btn {
+  display: inline-block;
+  padding: 30px 90px;
+  border-radius: 14px;
+  border: 1px solid #2a355c;
+}
+
+.submissions__opportunity .btn.primary {
+  background: linear-gradient(90deg, var(--brand), var(--acc));
+  color: white;
+  font-weight: 700;
   font-size: 1rem;
-  /* Usa tu color de texto "apagado" o secundario */
-  color: var(--muted);
+  padding: 1.2rem 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px #0383a044;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.3s;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+}
+
+/* Efecto al pasar el mouse */
+.submissions__opportunity .btn.primary:hover {
+  transform: scale(1.09);
+  box-shadow: 0 1px 20px #d0d1ddf7;
+}
+
+/* Efecto al presionar */
+.submissions__opportunity .btn.primary:active {
+  transform: scale(0.9);
+  box-shadow: 0 2px 8px #343539f7;
+}
+
+@media screen and (max-width: 700px) {
+  #submissions {
+    padding: 20px 0;
+  }
+
+  .submssions__poster,
+  .submissions__instruction,
+  .submissions__dates,
+  .submissions__opportunity {
+    margin: 0px 20px;
+    max-width: 800px;
+    line-height: 1.6;
+  }
+
+  .submssions__poster ul {
+    grid-template-columns: 1fr; /* lista en una columna */
+  }
+
+  .submssions__poster h2 {
+    font-size: 1.5em;
+  }
+
+  .submissions__instruction h3,
+  .submissions__dates h3,
+  .submissions__opportunity h3 {
+    font-size: 1.3rem;
+  }
 }
 
 /*SECTION OTROS*/
@@ -982,20 +1215,3 @@ header ul{
 /* ==========================================================================
    Timeline for Important Dates (Integrated with existing styles)
    ========================================================================== */
-.dates-timeline {
-  position: relative;
-  /* Espacio a la izquierda para la línea y los iconos */
-  padding-left: 60px;
-  margin: 2.5rem 0;
-}
-
-/* La línea vertical principal, usando un color de borde existente */
-.dates-timeline::before {
-  content: "";
-  position: absolute;
-  left: 19px; /* Centra la línea de 2px en el espacio del icono de 40px */
-  top: 5px;
-  bottom: 5px;
-  width: 2px;
-  background-color: #2a355c; /* Color consistente con tus bordes */
-}
