@@ -331,7 +331,7 @@ header ul {
   width: 100%;
   height: 100%;
   background: url("background-hero.jpg") center/cover no-repeat; /* coloca aquí tu imagen */
-  filter: brightness(0.3); /* difumina y oscurece la imagen */
+  filter: brightness(0.5); /* difumina y oscurece la imagen */
   z-index: 0; /* detrás del contenido */
 }
 
@@ -353,10 +353,18 @@ header ul {
 }
 .hero h2 {
   font-style: italic;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.hero h3 {
+  font-style: italic;
   font-size: 36px;
   font-weight: 400;
   line-height: 1.1;
 }
+
 .subtitle {
   color: var(--muted);
   margin: 0 0 6px;
@@ -415,9 +423,12 @@ header ul {
     padding: 40px 20px;
   }
   .hero h1 {
-    font-size: 20px;
+    font-size: 25px;
   }
   .hero h2 {
+    font-size: 22px;
+  }
+  .hero h3 {
     font-size: 17px;
   }
   .subtitle {
@@ -441,7 +452,7 @@ header ul {
   position: relative;
   background: linear-gradient(135deg, rgba(10, 10, 10, 0.7) 100%);
   height: 380px;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 #overview h2 {
@@ -1255,7 +1266,6 @@ header ul {
   color: #00ffff;
   border-color: #00ffff;
 }
-
 
 /*LINK VENUE*/
 
