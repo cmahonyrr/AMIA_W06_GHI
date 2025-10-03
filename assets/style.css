@@ -1243,6 +1243,20 @@ header ul {
   padding: 30px 200px;
 }
 
+.grid.two a {
+  color: #ffffff; /* blanco por defecto */
+  font-weight: 400;
+  text-decoration: none; /* quita el subrayado */
+  border-bottom: none;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.grid.two a:hover {
+  color: #00ffff;
+  border-color: #00ffff;
+}
+
+
 /*LINK VENUE*/
 
 #venue {
