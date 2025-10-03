@@ -447,7 +447,7 @@
       </section>
 
       <!-- LINK SPEAKERS-->
-      <section id="speakers" class="section alt">
+      <section id="speakers">
         <h2>Speakers &amp; Moderators</h2>
         <div class="cards avatars">
           <article class="card">
@@ -457,7 +457,7 @@
               alt="Mahony Reategui-Rivera"
               onerror="this.src='assets/speakers/placeholder.svg'"
             />
-            <div>
+            <div class="description">
               <h3>Mahony Reategui‑Rivera, MD</h3>
               <p>
                 <em>Panel:</em> Intervention Characteristics (bias mitigation,
@@ -472,7 +472,7 @@
               alt="Freddie Seba"
               onerror="this.src='assets/speakers/placeholder.svg'"
             />
-            <div>
+            <div class="description">
               <h3>Freddie Seba, MBA, MA</h3>
               <p>
                 <em>Panel:</em> Outer Setting (regulation, market dynamics,
@@ -487,7 +487,7 @@
               alt="Jose F. Florez-Arango"
               onerror="this.src='assets/speakers/placeholder.svg'"
             />
-            <div>
+            <div class="description">
               <h3>Jose F. Florez‑Arango, MD, MS, PhD</h3>
               <p>
                 <em>Panel:</em> Inner Setting (infrastructure readiness,
@@ -502,7 +502,7 @@
               alt="Humayera Islam"
               onerror="this.src='assets/speakers/placeholder.svg'"
             />
-            <div>
+            <div class="description">
               <h3>Humayera Islam, PhD</h3>
               <p>
                 <em>Panel:</em> Individuals (skills, beliefs, training,
@@ -517,7 +517,7 @@
               alt="Felix Holl"
               onerror="this.src='assets/speakers/placeholder.svg'"
             />
-            <div>
+            <div class="description">
               <h3>Felix Holl, PhD, MPH, M.Sc., FAMIA</h3>
               <p>
                 <em>Panel:</em> Process (planning, execution, monitoring,
@@ -529,7 +529,7 @@
       </section>
 
       <!-- LINK ORGANIZERS-->
-      <section id="organizers" class="section">
+      <section id="organizers">
         <h2>Advisors &amp; Organizers</h2>
         <ul class="grid two">
           <li>Elizabeth Campbell, PhD, MS, MSPH</li>
@@ -540,25 +540,45 @@
       </section>
 
       <!-- LINK VENUE-->
-      <section id="venue" class="section alt">
+      <section id="venue">
         <h2>Venue</h2>
-        <p>Room M101 · Atlanta Marriott Marquis, Atlanta, GA</p>
-        <div class="map-embed">
-          <iframe
-            title="Map — Atlanta Marriott Marquis"
-            src="https://www.google.com/maps?q=Atlanta%20Marriott%20Marquis&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <div class="venue-grid">
+          <!-- Columna izquierda: Mapa -->
+          <div class="venue-map">
+            <div class="map-embed">
+              <iframe
+                title="Map — Atlanta Marriott Marquis"
+                src="https://www.google.com/maps?q=Atlanta%20Marriott%20Marquis&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- Columna derecha: Imagen con cuadro de texto -->
+          <div class="venue-image">
+            <img src="assets/venue-image.jpg" alt="Atlanta Marriott Marquis" />
+            <div class="venue-text">
+              <h1>Atlanta Marriott Marquis</h1>
+              <p>
+                The Atlanta Marriott Marquis provides a modern and spacious
+                setting for the event, featuring state-of-the-art facilities and
+                a comfortable environment for all participants. Its central
+                location in Atlanta makes it easily accessible and convenient
+                for attendees traveling from near and far.
+              </p>
+              <p>Room M101 · Atlanta Marriott Marquis, Atlanta, GA</p>
+              <p>
+                <em>Exact room confirmed:</em> Room M101. Check the AMIA Annual
+                Symposium program for any updates.
+              </p>
+            </div>
+          </div>
         </div>
-        <p>
-          <em>Exact room confirmed:</em> Room M101. Check the AMIA Annual
-          Symposium program for any updates.
-        </p>
       </section>
 
       <!-- LINK CONTACT-->
-      <section id="contact" class="section">
+      <section id="contact">
         <h2>Contact</h2>
         <p>
           Questions or want to present a poster about your global AI initiative?
